@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-white dark:bg-gray-900 dark:text-white transition duration-500">
+
+    <!-- NAVBAR -->
+    <nav class="p-4 bg-green-100 dark:bg-gray-800 flex justify-between items-center shadow-lg sticky top-0 z-50">
+        <h1 class="text-2xl font-bold"><span class="text-green-700">GREEN</span>DEN</h1>
+        <div class="flex items-center gap-5">
+            <div class="flex gap-4 items-center">
+                <button onclick="toggleDarkMode()" class="border px-3 py-1 rounded-full">🌙</button>
+
+                <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" class="w-7 cursor-pointer md:hidden"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <ul class="hidden md:flex gap-6">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="Product.html" class="hover:underline">Products</a></li>
+                <li><a href="Contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-green-100 dark:bg-gray-800 p-6 transition-all duration-500 z-50">
+        <button onclick="closeMenu()" class="mb-6 text-xl">✖</button>
+        <ul class="flex flex-col gap-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Product.html">Products</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+    <section class="p-4 text-center">
+        <h1 class="text-3xl font-bold mt-5 text-center">Our Products</h1>
+        <input style="width: 80%;" placeholder="Search for a Product..." type="text"
+            class="p-2 m-3 border border-black text-black">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center mt-10 mb-6">
+
+            <!-- Product-->
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Snake Plant(bestseller).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Snake Plant</h2>
+                <p class="text-yellow-500 font-bold">★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(4.0)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$90</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Snake Plant','$90','./images/Snake Plant(bestseller).png','Low maintenance indoor plant that purifies air.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Snake Plant',90)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Peace Lily (Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Peace Lily</h2>
+                <p class="text-yellow-500 font-bold">★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(4.2)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$100</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Peace Lily','$100','./images/Peace Lily (Product).png','Elegant flowering plant ideal for indoor spaces.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Peace Lily',100)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Dumb Cane(Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Dumb Cane</h2>
+                <p class="text-yellow-500 font-bold">★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(4.5)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$150</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Dumb Cane','$150','./images/Dumb Cane(Product).png','Attractive leafy plant ideal for brightening indoor spaces with minimal care.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Dumb Cane',150)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Chinese Money Plant (bestseller).jpg" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Chinese Money Plant</h2>
+                <p class="text-yellow-500 font-bold">★★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(4.7)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$180</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Chinese Money Plant','$180','./images/Chinese Money Plant (bestseller).jpg','Easy-to-grow vine plant known for bringing greenery and positive vibes.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Chinese Money Plant',180)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Pinstripe Calathea(bestseller).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Pinstripe Calathea</h2>
+                <p class="text-yellow-500 font-bold">★★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(4.9)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$190</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Pinstripe Calathea','$190','./images/Pinstripe Calathea(bestseller).png','Lush indoor plant with striking patterned leaves for indoor decor.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Pinstripe Calathea',190)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Golden Pothos (Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Golden Pothos</h2>
+                <p class="text-yellow-500 font-bold">★★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(5.0)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$200</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Golden Pothos','$200','./images/Golden Pothos (Product).png','Low-light tolerant plant perfect for indoor hanging and shelves.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Golden Pothos',200)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Dragon Tree(Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Dragon Tree</h2>
+                <p class="text-yellow-500 font-bold">★★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(5.2)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$250</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Dragon Tree','$250','./images/Dragon Tree(Product).png','Bold upright plant that adds a modern touch to indoor spaces.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Dragon Tree',250)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Arrowhead Plant(Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Arrowhead Plant</h2>
+                <p class="text-yellow-500 font-bold">★★★★★ <sapn class="text-blue-700 font-bold dark:text-white">(5.5)
+                    </sapn>
+                </p>
+                <p class="text-green-600 font-bold">$280</p>
+                <div class="flex flex-col gap-2 mt-3">
+                    <button
+                        onclick="openProduct('Arrowhead Plant','$280','./images/Arrowhead Plant(Product).png','Fast-growing indoor plant with decorative arrow-shaped leaves.')"
+                        class="w-full border border-green-700 text-green-700 py-1.5 rounded-full hover:bg-green-700 hover:text-white transition text-sm">
+                        View Details
+                    </button>
+                    <button onclick="addToCart(event,'Arrowhead Plant',280)"
+                        class="w-full bg-green-700 text-white py-1.5 rounded-full hover:bg-green-800 transition text-sm">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+            <!-- CART TOAST -->
+            <div id="cartToast" class="fixed bottom-5 left-1/2 -translate-x-1/2
+            bg-green-700 text-white px-5 py-3 rounded-full
+            shadow-lg hidden z-50 text-sm md:text-base">
+                Item added to cart
+            </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-green-900 dark:bg-gray-800 text-white p-6 text-center">
+        <h1 class="text-2xl font-bold">Greenden</h1>
+        <p class="text-sm text-gray-300 mt-2">© 2026 Greenden. All rights reserved.</p>
+    </footer>
+
+
+    <div id="productModal"
+        class="fixed hidden bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl z-50 w-11/12 max-w-md">
+
+        <button onclick="closeProduct()" class="absolute top-2 right-2 text-xl">✖</button>
+
+        <img id="modalImg" class="rounded-xl mb-3 w-full">
+        <h2 id="modalTitle" class="font-bold text-lg"></h2>
+        <p id="modalPrice" class="text-green-600 font-bold"></p>
+        <p id="modalDesc" class="text-sm mt-2"></p>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        tailwind.config = { darkMode: 'class' }
+        function openMenu() {
+            document.getElementById("mobileMenu").style.right = "0";
+        }
+        function closeMenu() {
+            document.getElementById("mobileMenu").style.right = "-100%";
+        }
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle("dark");
+        }
+        /* ---------- DARK MODE GLOBAL ---------- */
+        document.addEventListener("DOMContentLoaded", () => {
+            const theme = localStorage.getItem("theme");
+            const btn = document.querySelector("button[onclick='toggleDarkMode()']");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+                btn.innerText = "☀️";
+            } else {
+                btn.innerText = "🌙";
+            }
+        });
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const btn = document.querySelector("button[onclick='toggleDarkMode()']");
+
+            html.classList.toggle("dark");
+
+            if (html.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+                btn.innerText = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                btn.innerText = "🌙";
+            }
+        }
+
+
+        // Open Product Modal (Center)
+        function openProduct(title, price, img, desc) {
+            const modal = document.getElementById("productModal");
+
+            modal.querySelector("#modalTitle").innerText = title;
+            modal.querySelector("#modalPrice").innerText = price;
+            modal.querySelector("#modalImg").src = img;
+            modal.querySelector("#modalDesc").innerText = desc;
+
+            modal.style.top = "50%";
+            modal.style.left = "50%";
+            modal.style.transform = "translate(-50%, -50%)";
+            modal.style.width = "60%";        // responsive width
+            modal.style.maxWidth = "300px";   // max width for bigger screens
+
+            modal.classList.remove("hidden");
+        }
+
+        function closeProduct() {
+            document.getElementById("productModal").classList.add("hidden");
+        }
+
+        window.addEventListener("scroll", () => {
+            document.querySelectorAll(".reveal").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        });
+
+        function addToCart(event, name, price) {
+            event.stopPropagation();
+            const toast = document.getElementById("cartToast");
+            toast.innerText = name + " added to cart";
+            toast.classList.remove("hidden");
+            setTimeout(() => toast.classList.add("hidden"), 2000);
+        }
+    </script>
+
+</body>
+
+</html>

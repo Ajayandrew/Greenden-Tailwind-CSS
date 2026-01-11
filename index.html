@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 dark:text-white border border-white transition duration-500">
+
+    <!-- NAVBAR -->
+    <nav class="p-4 bg-green-100 dark:bg-gray-800 flex justify-between items-center shadow-lg sticky top-0 z-50">
+        <h1 class="text-2xl font-bold"><span class="text-green-700 dark:text-green-500">GREEN</span>DEN</h1>
+        <div class="flex items-center gap-5">
+            <div class="flex gap-4 items-center">
+                <button onclick="toggleDarkMode()" class="border px-3 py-1 rounded-full">🌙</button>
+
+                <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" class="w-7 cursor-pointer md:hidden"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <ul class="hidden md:flex gap-6">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="Product.html" class="hover:underline">Products</a></li>
+                <li><a href="Contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+        class="fixed top-0 right-[-100%] w-64 h-full bg-green-100 dark:bg-gray-800 p-6 transition-all duration-500 z-50">
+        <button onclick="closeMenu()" class="mb-6 text-xl">✖</button>
+        <ul class="flex flex-col gap-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Product.html">Products</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+
+    <section class="relative w-full h-[300px] overflow-hidden">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="./images/header image.png" alt="Plants" class="w-full h-full object-cover">
+
+            <!-- Transparent Gray Overlay -->
+            <div class="absolute inset-0 bg-gray-800 bg-opacity-70"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4"><span class="text-green-400 text-5xl font-bold">Green
+                    Plants</span> for Your Interior</h1>
+            <p class="mb-6 text-lg md:text-xl">Natural & Artificial Plants</p>
+            <div class="flex gap-4">
+                <a href="Product.html">
+                    <button
+                        class="bg-black text-white px-6 py-2 rounded-full hover:bg-green-600 hover:text-black transition">
+                        Shop Now
+                    </button>
+                </a>
+                <a href="https://www.youtube.com/shorts/UaXmwZenmnA">
+                    <button
+                        class="border border-white px-6 py-2 rounded-full hover:bg-green-900 hover:text-white transition">
+                        Watch Video
+                    </button>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="text-center">
+        <h1 class="font-bold text-3xl mt-5">About Us</h1>
+        <p>This site for those who admire the beauty and harmony of nature</p>
+        <div class="md:flex">
+            <div class="border border-black dark:border-white p-2 m-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-16 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                </svg>
+
+                <h2 class="text-xl font-medium">Large Attachment</h2>
+                <p>We offer our customers more then 15,000 items of natural and artificial flowers, trees and many
+                    accessories for floristry</p>
+            </div>
+            <div class="border border-black dark:border-white p-2 m-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-16 inline ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                </svg>
+
+                <h2 class="text-xl font-medium">Free and Fast Shipping</h2>
+                <p>Free and Fast Shipping We will ship our goods after reciept of fund to current account choose the
+                    most convenient from the offered delivery option</p>
+            </div>
+            <div class="border border-black dark:border-white p-2 m-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-16 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                </svg>
+
+                <h2 class="text-xl font-medium">24/7 Support</h2>
+                <p>We work seven days a week and a lunch break. we will be glad to welcome you as our buyer and thank
+                    you for trust in us</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Best Seller-->
+    <section class="p-8 bg-gray-100 dark:bg-gray-800 reveal">
+        <h1 class="text-3xl font-bold text-center mb-6">Best Sellers</h1>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Snake Plant(bestseller).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Snake Plant</h2>
+                <p class="text-green-600 font-bold">$90</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Peace Lily (Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Peace Lily</h2>
+                <p class="text-green-600 font-bold">$100</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Dumb Cane(Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Dumb Cane</h2>
+                <p class="text-green-600 font-bold">$150</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Chinese Money Plant (bestseller).jpg" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Chinese Money Plant</h2>
+                <p class="text-green-600 font-bold">$180</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Pinstripe Calathea(bestseller).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Pinstripe Calathea</h2>
+                <p class="text-green-600 font-bold">$190</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Golden Pothos (Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Golden Pothos</h2>
+                <p class="text-green-600 font-bold">$200</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Dragon Tree(Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Dragon Tree</h2>
+                <p class="text-green-600 font-bold">$250</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-2xl cursor-pointer">
+                <img src="./images/Arrowhead Plant(Product).png" class="rounded-xl">
+                <h2 class="font-semibold mt-2">Arrowhead Plant</h2>
+                <p class="text-green-600 font-bold">$280</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="p-8 reveal">
+        <h1 class="text-3xl font-bold text-center mb-6">Customer Reviews</h1>
+
+        <div class="max-w-3xl mx-auto flex flex-col gap-6">
+            <div class="bg-green-900 p-6 rounded-xl text-white">
+                <p class="text-yellow-300 font-bold">Genny</p>
+                <p>★★★★★</p>
+                <p>“Beautiful and healthy plants. Packaging was perfect and delivery was quick.
+                    The plants looked exactly like the pictures.
+                    Very fresh and well maintained.
+                    Highly recommend Greenden!”</p>
+
+            </div>
+
+            <div class="bg-green-900 p-6 rounded-xl text-white">
+                <p class="text-yellow-300 font-bold">Jim</p>
+                <p>★★★★★</p>
+                <p>“Great quality plants and excellent customer support.
+                    Delivery was faster than expected.
+                    The plants were neatly packed and damage-free.
+                    My home feels fresher already!”</p>
+
+            </div>
+
+            <div class="bg-green-900 p-6 rounded-xl text-white">
+                <p class="text-yellow-300 font-bold">Parker</p>
+                <p>★★★★★</p>
+                <p>“Affordable prices with premium quality.
+                    Easy ordering and smooth delivery process.
+                    The plant quality exceeded my expectations.
+                    Very satisfied with my purchase from Greenden.”</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--News Letter-->
+    <section class="text-center">
+        <h1 class="text-3xl font-bold mt-5 text-center">Join our News Letter</h1>
+        <p>Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <input type="text" class="border border-black p-2 m-3" placeholder="Write your Newspaper...."
+            style="width: 80%;">
+        <br>
+        <button class="bg-black text-white p-3 m-1 underline">Subscribe</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-green-900 dark:bg-gray-800 text-white p-6 text-center">
+        <h1 class="text-2xl font-bold">Greenden</h1>
+        <p class="text-sm text-gray-300 mt-2">© 2026 Greenden. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        tailwind.config = { darkMode: 'class' }
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if alert has already been shown in this session
+            if (!sessionStorage.getItem("alertShown")) {
+                alert("Click on Dark mode for best Experience!!!");
+                sessionStorage.setItem("alertShown", "true"); // Mark it as shown
+            }
+        });
+
+        function openMenu() {
+            document.getElementById("mobileMenu").style.right = "0";
+        }
+        function closeMenu() {
+            document.getElementById("mobileMenu").style.right = "-100%";
+        }
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle("dark");
+        }
+        /* ---------- DARK MODE GLOBAL ---------- */
+        document.addEventListener("DOMContentLoaded", () => {
+            const theme = localStorage.getItem("theme");
+            const btn = document.querySelector("button[onclick='toggleDarkMode()']");
+
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark");
+                btn.innerText = "☀️";
+            } else {
+                btn.innerText = "🌙";
+            }
+        });
+
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const btn = document.querySelector("button[onclick='toggleDarkMode()']");
+
+            html.classList.toggle("dark");
+
+            if (html.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+                btn.innerText = "☀️";
+            } else {
+                localStorage.setItem("theme", "light");
+                btn.innerText = "🌙";
+            }
+        }
+
+        window.addEventListener("scroll", () => {
+            document.querySelectorAll(".reveal").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
