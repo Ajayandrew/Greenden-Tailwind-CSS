@@ -10,7 +10,7 @@ Greenden is a modern, responsive **plant and gardening website** built using **H
 
 ## 📂 GitHub Repository
 
-🔗 Repository:
+🔗 Repository: https://github.com/Ajayandrew/Greenden-Tailwind-CSS.git
 
 ---
 
